@@ -11,16 +11,11 @@ const CheckoutPage: React.FC = () => {
   const discount = store((state) => state.discountState.discountPercent)
 
   const discountedPrice = (basePrice * discount) / 100
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    // Mock form submission logic
-    console.log('Form submitted', { name, email, creditCard })
-  }
 
   return (
     <div className="wrapper">
       <div className="discount">
-        Personalised Discount: <span className='discount-percent'>{discount}%</span>
+        Personalised Discount: <span className="discount-percent">{discount}%</span>
       </div>
       <div className="main-c">
         <img
