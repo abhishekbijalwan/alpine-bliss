@@ -1,0 +1,135 @@
+/********** basic styling ***************/
+:root {
+  --hero-bg-color: #faebd7;
+  --margin-bottom: 1.5rem;
+  --base-color: #2e4957;
+  --brand-color: #ff554f;
+  --brand-secondry: #2068ef;
+  --heading-font: 'Kanit', sans-serif;
+  --heading-1: 3rem;
+  --heading-1-small: calc(var(--heading-1) / 2);
+}
+
+body {
+  color: var(--base-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+legend {
+  font-family: var(--heading-font);
+  color: var(--brand-color);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: var(--heading-1);
+  font-weight: 600;
+}
+
+img {
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+@media (min-width: 576px) {
+  img {
+    width: auto;
+  }
+}
+
+/********** Bootstrap customization ***************/
+
+.container-fluid {
+  padding: 0;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.col-form-label,
+.check-heading {
+  font-weight: bold;
+}
+
+.form-check label:hover {
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--brand-color);
+  border: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-secondry);
+}
+
+/********** custom components ***************/
+
+header {
+  background-color: var(--hero-bg-color);
+  margin-bottom: var(--margin-bottom);
+}
+
+.header-image,
+.header-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.title-description {
+  font-size: var(--heading-1-small);
+}
+
+.form-check-input:valid {
+  border: 1px solid var(--brand-secondry);
+}
+
+.form-check-label .form-check-input {
+  visibility: hidden;
+}
+
+.form-check-label .form-check-input + .form-check-mark {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--brand-color);
+  border-radius: 50%;
+  margin-left: -1rem;
+  margin-right: 0.75rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.form-check-label .form-check-input:checked + .form-check-mark {
+  background: var(--brand-color);
+}
+
+.hero-img {
+  filter: brightness(0) saturate(100%) invert(41%) sepia(32%) saturate(1119%) hue-rotate(314deg) brightness(110%) contrast(115%);
+}
+
+.main-container {
+  background: url(../src/assets/clouds-layer.webp);
+}
+
+.red {
+  color: red;
+}
+
+.font-small {
+  font-size: small;
+}
